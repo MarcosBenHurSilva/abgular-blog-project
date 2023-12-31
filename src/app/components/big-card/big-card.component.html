@@ -1,22 +1,20 @@
 <div class="container__big-card">
   <div class="big-card__picture">
-    <img src="https://www.aceinfoway.com/blog/wp-content/uploads/2022/08/7-Most-Suitable-AngularJS-Frameworks.png"
+    <img src= {{article.photoCover}}
     height="200px"
     alt=""
     srcset="">
   </div>
   <div class="big-card__date">
-    <h6> {{ cardDate | date: 'MMMM d, y' }} </h6>
+    <h6> {{ article.cardDate }} </h6>
   </div>
   <div class="big-card__title">
-    <h1><a href="https://angular.io/">Saiu a nova versão do Angular</a></h1>
+    <h1><a href={{article.link}}>{{ article.cardTitle}}</a></h1>
   </div>
   <div class="big-card__description">
     <p>
-      <a href="https://angular.io/">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quas, earum laboriosam expedita pariatur optio aperiam odio, maiores beatae ratione quis dolorem!
-        Totam, natus nemo! Animi repellendus minima delectus odit voluptatibus.
+      <a href={{article.link}}>
+        {{article.cardDescription}}
       </a>
     </p>
   </div>

@@ -22,7 +22,7 @@
   margin-right: 20px;
 }
 
-.small-card__title > h6 {
+.small-card__title > span {
   margin-top: 5px;
   color: grey;
   display: flex;

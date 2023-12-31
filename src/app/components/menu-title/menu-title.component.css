@@ -17,3 +17,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  .container_menu-title > h1 {
+    font-size: 30px;
+  }
+}

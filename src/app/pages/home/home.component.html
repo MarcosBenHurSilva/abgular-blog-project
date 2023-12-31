@@ -6,11 +6,15 @@
 
 <div class="container__articles">
   <div class="articles__main">
-    <app-big-card></app-big-card>
+    <app-big-card [article]="bigArticle"></app-big-card>
   </div>
   <div class="articles__others">
-    <app-small-card></app-small-card>
-    <app-small-card></app-small-card>
-    <app-small-card></app-small-card>
+    <app-small-card
+      *ngFor="let article of sideArticles"
+      [photoCoverS]="article.photoCover"
+      [cardTitleS]="article.cardTitle"
+      [cardDateS]="article.cardDate"
+      [articleId]="article.id"
+    ></app-small-card>
   </div>
 </div>

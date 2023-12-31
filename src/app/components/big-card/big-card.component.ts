@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { articleMock } from '../../mocks/mocks-cards';
 
 @Component({
   selector: 'app-big-card',
@@ -10,5 +11,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './big-card.component.css'
 })
 export class BigCardComponent{
-  cardDate = new Date('2023-12-30'); // Example date
+  constructor() {}
+
+  @Input() article: articleMock = {
+    id: 0,
+    photoCover: "",
+    cardTitle: "",
+    cardDate: "",
+    cardDescription: "",
+    link: ""
+  }
 }

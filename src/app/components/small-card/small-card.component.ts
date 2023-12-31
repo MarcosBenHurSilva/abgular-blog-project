@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { articleMock } from '../../mocks/mocks-cards';
 
 @Component({
   selector: 'app-small-card',
@@ -10,5 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './small-card.component.css'
 })
 export class SmallCardComponent {
-  cardDate = new Date('2023-12-28'); // Example date
+  constructor() {}
+
+  @Input() photoCoverS: string = ''
+  @Input() cardTitleS: string = ''
+  @Input() cardDateS: string = ''
+  @Input() articleId: number = 0
 }
