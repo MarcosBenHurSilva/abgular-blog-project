@@ -1,3 +1,7 @@
+# Ignorem o Nome Errado
+
+Eu só vi quando fiz o último commit do projeto 😭
+
 # AngularBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
