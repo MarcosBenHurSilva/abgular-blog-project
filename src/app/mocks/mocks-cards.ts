@@ -28,7 +28,7 @@ export const Articles = [
     idn: 2,
     id: "2",
     photoCover: "https://classic.exame.com/wp-content/uploads/2017/08/new-youtube-logo-840x402.jpg?quality=70&strip=info&w=840",
-    cardTitle: "Acese o Youtube",
+    cardTitle: "O Youtube ainda está ON 👍",
     cardDate: "December 26, 2023",
     cardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
