@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './big-card.component.html',
   styleUrl: './big-card.component.css'
 })
-export class BigCardComponent {
-
+export class BigCardComponent{
+  cardDate = new Date('2023-12-30'); // Example date
 }
