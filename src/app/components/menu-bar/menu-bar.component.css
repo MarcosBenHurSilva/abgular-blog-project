@@ -7,3 +7,17 @@
   margin-right: 20px;
   list-style: none;
 }
+
+#logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(
+      34deg, rgba(252,41,166,1)
+      0%, rgba(182,3,3,1)
+      55%, rgba(255,132,0,1)
+      100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
