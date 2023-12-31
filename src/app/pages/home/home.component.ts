@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
   getArticles(): void {
     Articles.forEach(element => {
-      if (element.id !== 0) {
+      if (element.idn !== 0) {
         this.sideArticles.push(element)
       }
     });

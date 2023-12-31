@@ -1,16 +1,13 @@
-<div class="container__content">
-  <a [routerLink]="['']"> << VOLTAR</a>
-  <div class="content__cover">
-    <img src={{ coverPhoto }} alt="">
-  </div>
-  <div class="content__title">
-    <span>{{ contentDate }}</span>
-    <h1> {{ contentTitle }}</h1>
+<main>
     <hr>
-  </div>
-  <div class="content__description">
-    <p>
-      {{ contentDescription }}
-    </p>
-  </div>
-</div>
+    <h1>{{cardTitle.toUpperCase()}}</h1>
+    <hr>
+    <div class="container__action-button">
+        <a [routerLink]="['']"> << VOLTAR </a>
+        <span>{{cardDate}}</span>
+    </div>
+    <div class="container__article-content">
+        <img align="left" src= "{{ photoCover }}">
+        <span>{{ cardDescription }}</span>
+    </div>
+</main>

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { articleMock, Articles } from '../../mocks/mocks-cards';
 
 
 @Component({
@@ -10,14 +12,37 @@ import { RouterLink } from '@angular/router';
   styleUrl: './content.component.css'
 })
 export class ContentComponent implements OnInit{
-  photoCover: string = "https://www.aceinfoway.com/blog/wp-content/uploads/2022/08/7-Most-Suitable-AngularJS-Frameworks.png";
-  contentDate: string = "December 31, 2023"
-  contentTitle: string = "Minha Notícia"
-  contentDescription: string = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda explicabo, unde saepe modi maiores culpa doloremque earum beatae nobis odit,obcaecati voluptatibus est nisi tempora officia vero dolores blanditiis sequi."
+  constructor(
+    private route: ActivatedRoute
+  ) {}
+  article: articleMock = {
+    idn: 0,
+    id: "0",
+    photoCover: "",
+    cardTitle: "",
+    cardDate: "",
+    cardDescription: ""
+  }
 
-  constructor(){}
+  photoCover: string = ""
+  cardTitle: string = ""
+  cardDescription: string = ""
+  cardDate: string = ""
+  private id:string | null = "0"
+  idn: number = 0
 
   ngOnInit(): void {
-      
+    this.route.paramMap.subscribe(value =>
+      this.id = value.get('id'))
+
+      this.setValuesToComponent(this.id)
+   }
+  setValuesToComponent(id:string | null){
+    const result = Articles.filter( article => article.id == this.id)[0]
+
+    this.photoCover = result.photoCover;
+    this.cardDescription = result.cardDescription;
+    this.cardTitle = result.cardTitle;
+    this.cardDate = result.cardDate;
   }
 }

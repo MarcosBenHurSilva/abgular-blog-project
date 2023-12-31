@@ -9,13 +9,12 @@
     <h6> {{ article.cardDate }} </h6>
   </div>
   <div class="big-card__title">
-    <h1><a href={{article.link}}>{{ article.cardTitle}}</a></h1>
+    <h1>{{ article.cardTitle}}</h1>
   </div>
   <div class="big-card__description">
     <p>
-      <a href={{article.link}}>
         {{article.cardDescription}}
-      </a>
     </p>
+    <a [routerLink]="['/content', article.id]">Veja mais...</a>
   </div>
 </div>
